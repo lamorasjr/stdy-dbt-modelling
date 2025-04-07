@@ -67,3 +67,32 @@ models:
         tests:
           - not_null
           - unique
+
+  - name: fct_sales
+    columns:
+
+      - name: sales_key
+        description: The surrogate key of the fct sales
+        tests:
+          - not_null
+          - unique
+
+      - name: product_key
+        description: The foreign key of the product
+        tests:
+          - not_null
+
+      - name: customer_key
+        description: The foreign key of the customer
+        tests:
+          - not_null 
+      
+      ## To be completed
+
+      - name: order_qty
+        description: The quantity of the product 
+        tests:
+          - not_null
+
+      - name: revenue
+        description: The revenue obtained by multiplying unitprice and orderqty
